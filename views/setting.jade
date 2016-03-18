@@ -1,0 +1,40 @@
+extends layout-main
+
+block content
+
+      // ===============================================
+      // Content Wrapper. Contains page content
+      .content-wrapper(ng-controller="settingController")
+        // Main content
+        section.content
+          .box
+            .box-header.with-border
+              h3.box-title Setting
+            .box-body
+              .form-group
+                label Username
+                input.form-control(type='text', placeholder='Enter username', ng-model="user.username")
+              .form-group
+                label Password
+                input.form-control(type='password', placeholder='Enter password', ng-model="user.password")
+              .form-group
+                label Email address
+                input.form-control(type='email', placeholder='Enter email', ng-model="user.email")
+              .form-group
+                label Phone number
+                input.form-control(type='text', placeholder='Enter phone number', ng-model="user.phone")
+              .form-group
+                label City
+                input.form-control(type='text', placeholder='Enter city', ng-model="user.city")
+              .form-group
+                label State
+                input.form-control(type='text', placeholder='Enter state', ng-model="user.state")
+            .box-footer
+              .input-group
+                button.btn.btn-primary(ng-click="setting_update()") Save
+      // /.content-wrapper
+      footer.main-footer
+        strong
+          | Copyright © 2016 
+          a(href='https://github.com/awan21clouds') Awan21clouds
+          | .

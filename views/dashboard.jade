@@ -1,0 +1,51 @@
+extends layout-main
+
+block content
+
+      // ===============================================
+      // Content Wrapper. Contains page content
+      .content-wrapper(ng-controller="bookController")
+        // Main content
+        section.content
+          .callout.callout-info
+            h1
+              | Hi #{username} ! Welcome to FCC book trading application!
+            p
+              | This is an application that can be used for book trading.
+              | Let's trade to make sure it.
+          .box
+            .box-header.with-border
+              h3.box-title All books
+            .box-body
+              ul.mailbox-attachments.clearfix
+                li(ng-repeat='book in books')
+                  span.mailbox-attachment-icon.has-img
+                    img(src='{{book.thumbnail}}', alt='Attachment')
+                  .mailbox-attachment-info
+                    span.mailbox-attachment-size
+                      span(ng-bind="book.title")
+          .box
+            .box-header.with-border
+              h3.box-title My books
+            .box-body
+              ul.mailbox-attachments.clearfix
+                li(ng-repeat='book in myBooks')
+                  span.mailbox-attachment-icon.has-img
+                    img(src='{{book.thumbnail}}', alt='Attachment')
+                  .mailbox-attachment-info
+                    span.mailbox-attachment-size
+                      span(ng-bind="book.title")
+                      a.btn.btn-default.btn-xs.pull-right(href='javascript:;', ng-click="delete(book._id)")
+                        i.fa.fa-times
+            .box-footer
+              .input-group
+                input.form-control(type='text', ng-model="book.name")
+                span.input-group-btn
+                  button.btn.btn-info.btn-flat(type='button', ng-click="addBook()") Add
+      // /.content-wrapper
+      footer.main-footer
+        strong
+          | Copyright © 2016
+          a(href='https://github.com/awan21clouds') Awan21clouds
+          | .
+      script(src='/javascripts/dashboard.js')

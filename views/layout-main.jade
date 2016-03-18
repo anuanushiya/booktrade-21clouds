@@ -1,0 +1,46 @@
+doctype html
+html(ng-app="booktrade")
+  head
+    title= title
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/ionicons/css/ionicons.min.css')
+    link(rel='stylesheet', href='/AdminLTE/dist/css/AdminLTE.min.css')
+    link(rel='stylesheet', href='/AdminLTE/dist/css/skins/_all-skins.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js')
+    script(src='/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js')
+    script(src='/AdminLTE/dist/js/app.min.js')
+    script(src='/AdminLTE/dist/js/demo.js')
+    script(src='/angular/angular.min.js')
+    script(src='/angular-route/angular-route.min.js')
+    script(src='/controller.js')
+  body.hold-transition.skin-blue.sidebar-collapse.sidebar-mini
+    .wrapper
+      aside.main-sidebar
+        // sidebar: style can be found in sidebar.less
+        section.sidebar
+          .user-panel
+            a(href="#", class="pull-left image")
+              img.img-circle(src='../AdminLTE/dist/img/default-50x50.gif', alt='User Image')
+          ul.sidebar-menu
+            li
+              a(href='../dashboard')
+                i.fa.fa-dashboard
+                span Dashboard
+                small.label.pull-right.bg-green new
+            li
+              a(href='../setting')
+                i.fa.fa-cogs
+                span Setting
+                small.label.pull-right.bg-green new
+            li
+              a(href='../user/logout')
+                i.fa.fa-power-off
+                span Logout
+                small.label.pull-right.bg-green new
+      block content
+
+

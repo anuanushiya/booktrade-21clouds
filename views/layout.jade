@@ -1,0 +1,18 @@
+doctype html
+html(ng-app="booktrade")
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/ionicons/css/ionicons.min.css')
+    link(rel='stylesheet', href='/AdminLTE/dist/css/AdminLTE.min.css')
+    link(rel='stylesheet', href='/AdminLTE/dist/css/skins/_all-skins.min.css')
+    script(src='/AdminLTE/plugins/jQuery/jQuery-2.1.4.min.js')
+    script(src='/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/angular/angular.min.js')
+    script(src='/angular-route/angular-route.min.js')
+    script(src='/controller.js')
+  body
+    div(ng-view)
+    block content
